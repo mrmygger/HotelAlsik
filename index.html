@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALsik elevations senge</title>
+    <style>
+
+    html {
+    scroll-behavior: smooth;
+    }
+
+    body {
+        color: #706359;
+    }
+
+    main {
+    animation-name: slideIn;
+    animation-duration: 2s;
+    }
+
+    #button {
+        background-color: #706359;
+    }
+
+    @keyframes slideIn {
+            from {padding-top: 100vh; opacity: 0%;}
+            to {padding-top: 0; opacity: 100%;}
+    }
+
+    </style>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="flex justify-center">
+        <img class="h-32" src="img/alsikLogo.jpg" alt="ALsik logo">
+    </header>
+
+    <main class="flex flex-col items-center">
+
+<!--VELKOMMEN-->
+    <section class="px-5">
+        <section class="flex pb-3 text-2xl">
+            <img src="img/denmarkFlag.svg" alt="danish flag">
+            <h1 class="font-bold px-16">Velkommen</h1>
+        </section>
+
+        <p class="mb-10 text-center">For at kunne benytte sengen skal du først acceptere vores vilkår og vi gør opmærksom på at du vil blive opkrævet <strong class="underline">79kr.</strong> på din hotel regning når du afregner ved udtjekning af hotellet. </p>
+    </section> 
+
+<!--WELLCOME-->
+    <section class="px-5">
+        <section class="flex pb-3">
+            <img src="img/englandFlag.svg" alt="english flag">
+            <h2 class="font-bold text-2xl px-20">Welcome</h2>
+        </section>
+
+        <p class="mb-10 text-center">In order to use the bed, you must first accept our terms and we point out that you will be charged <strong class="underline">DKK 79</strong> on your hotel bill when you settle at check out of the hotel.</p>
+    </section>
+
+<!--ACCEPT TERMS-->
+    <section class="flex px-3 py-6">
+        <input onclick="acCept(), href='#button'" id="accept" class="self-center mr-4 ml-3 h-7 w-7"type="checkbox" name="accept">
+        <label for="accept" class="text-xs">Jeg acceptere at blive opkrævet <strong>79kr.</strong> ved bestilling. <br> I accept to be charged <strong>DKK 79</strong> when ordering.</label>
+    </section> 
+
+    <button style="display: none;" onclick="window.location.href='finalPage.html'" id="button" class="my-10 px-10 py-2 text-white">Send</button>
+
+    </main>
+
+    <script>
+function acCept() {
+  var checkBox = document.getElementById("accept");
+  var button = document.getElementById("button");
+  if (checkBox.checked == true){
+    button.style.display = "block";
+  } else {
+     button.style.display = "none";
+  }
+}
+    </script>
+</body>
+</html>
